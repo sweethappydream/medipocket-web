@@ -1,0 +1,23 @@
+.header {
+  &.stiky {
+    .nav-link {
+      &.mobile-app-link {
+        color: #cf242a;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    &.header {
+      .nav-link {
+        padding: 10px 0px 10px;
+      }
+    }
+  }
+}

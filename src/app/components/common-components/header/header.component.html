@@ -1,0 +1,66 @@
+<!--Start Preloader-->
+<div class="site-preloader">
+  <div class="spinner">
+    <img src="assets/img/loader.gif" alt="" />
+  </div>
+</div>
+<!--End Preloader-->
+
+<header id="mainHeader" class="header">
+  <!-- Start Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light p-0">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/app/home">
+        <img src="assets/img/logo.png" alt="Mymedipocket Logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/app/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/app/how-it-works">How It Works</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a
+              routerLinkActive="active"
+              class="nav-link"
+              routerLink="/app/sign-up-form"
+              >Sign In</a
+            > -->
+            <a class="nav-link mobile-app-link" href="javascript:void(0)" (click)="open(content)">Mobile App</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/app/contact-us">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- Modal -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h6 class="modal-title" id="modal-basic-title">Download Our App</h6>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-btn-group d-flex align-items-center justify-content-between">
+      <a href="https://play.google.com/store/apps/details?id=com.medipocket.patient" target="_blank"
+        (click)="modal.dismiss('Cross click')">
+        <img src="assets/img/android-download.png" style="max-width: 150px;" class="d-inline-block v-align-middle" />
+      </a>
+      <a href="https://apps.apple.com/us/app/medipocket-rx-saving-on-demand/id1468232750" target="_blank"
+        (click)="modal.dismiss('Cross click')">
+        <img src="assets/img/download-appstore.png" style="max-width: 150px;" class="d-inline-block v-align-middle" />
+      </a>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,183 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+        <div class="widget1">
+          <div class="logo float-none">
+            <img src="assets/img/footer-logo.png" class="img-fluid" alt="Mymedipocket Footer Logo" />
+          </div>
+          <p>
+            MediPocket is one of the only advanced healthcare platforms designed
+            by doctors and engineers that integrates machine learning and
+            artificial intelligence to create an efficient, transparent,
+            affordable, convenient, coordinated, preventative care system for
+            all.
+          </p>
+          <p>
+            MediPocket is not sponsored by or affiliated with any of the
+            pharmacies identified in its price comparisons. All trademarks,
+            brands, logos and copyright images are property of their respective
+            owners and rights holders and are used solely to represent the
+            products of these rights holders. This information is for
+            informational purposes only and is not meant to be a substitute for
+            professional medical advice, diagnosis or treatment. MediPocket is
+            not offering advice, recommending or endorsing any specific
+            prescription drug, pharmacy or other information on the site.
+            MediPocket provides no warranty for any of the pricing data or oth
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="widget3">
+          <h5>
+            Quick Links
+          </h5>
+          <ul>
+            <li>
+              <a routerLink="/app/home">
+                Home
+              </a>
+            </li>
+            <li>
+              <a routerLink="/app/how-it-works">
+                How It Works
+              </a>
+            </li>
+            <!-- <li>
+              <a href="#">
+                Discount Card
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                On-Demand MediDelivery
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                My Health
+              </a>
+            </li> -->
+            <li>
+              <a href="javscript:void(0)" (click)="open(content)">
+                Sign Up
+              </a>
+            </li>
+            <li>
+              <a routerLink="/app/contact-us">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="widget4">
+          <h5>
+            Find Us
+          </h5>
+          <div class="socialLinks">
+            <ul>
+              <li>
+                <a href="https://m.facebook.com/profile.php?id=649672258803194&ref=content_filter">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://in.linkedin.com/company/mymedipocket">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="socialLinks" style="margin-top: 0px;">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fab fa-google-plus-g"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/medipocket/?hl=en">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/watch?v=6kFvvTw6rwA">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyRightArea">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p>
+            &copy; 2019 MEDIPOCKET, INC.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--Start ClickToTop-->
+<div class="totop">
+  <a href="#top">
+    <p>
+      <i class="fas fa-angle-up"></i>
+    </p>
+  </a>
+</div>
+<!--End ClickToTop-->
+
+<!-- Modal -->
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h6 class="modal-title" id="modal-basic-title">DISCOUNT CARD</h6>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <img src="assets/img/discount-card.jpeg" class="w-100 mb-3" />
+    <div class="modal-btn-group d-flex align-items-center justify-content-between">
+      <a href="javascript:void(0)" class="modal-btn" (click)="openDownloadAppModal(downloadApp)">Download
+        App</a>
+      <a routerLink="/app/contact-us" class="modal-btn" (click)="modal.dismiss('Cross click')">Sign Up</a>
+    </div>
+  </div>
+</ng-template>
+
+<!-- Modal -->
+<ng-template #downloadApp let-modal>
+  <div class="modal-header">
+    <h6 class="modal-title" id="modal-basic-title">Download Our App</h6>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-btn-group d-flex align-items-center justify-content-between">
+      <a href="https://play.google.com/store/apps/details?id=com.medipocket.patient" target="_blank"
+        (click)="modal.dismiss('Cross click')">
+        <img src="assets/img/android-download.png" style="max-width: 150px;" class="d-inline-block v-align-middle" />
+      </a>
+      <a href="https://apps.apple.com/us/app/medipocket-rx-saving-on-demand/id1468232750" target="_blank"
+        (click)="modal.dismiss('Cross click')">
+        <img src="assets/img/download-appstore.png" style="max-width: 150px;" class="d-inline-block v-align-middle" />
+      </a>
+    </div>
+  </div>
+</ng-template>
